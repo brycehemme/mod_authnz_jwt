@@ -1117,9 +1117,9 @@ static void get_public_key(request_rec *r, char* signature_public_key_file, unsi
     }
     apr_size_t key_len;
     rv = apr_file_read_full(key_fd, key, MAX_KEY_LEN, &key_len);
-    ap_log_rerror(APLOG_MARK, APLOG_ERR, 0, r, APLOGNO(1111)
+    ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(1111)
                 "%s", key);
-    ap_log_rerror(APLOG_MARK, APLOG_ERR, 0, r, APLOGNO(1111)
+    ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(1111)
                 "%s", signature_public_key_file);
     if(rv!=APR_SUCCESS && rv!=APR_EOF){
         ap_log_rerror(APLOG_MARK, APLOG_ERR, 0, r, APLOGNO(55510)
